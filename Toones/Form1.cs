@@ -21,6 +21,10 @@ namespace Toones
 		public string thisDirectory = Path.Combine(Environment.CurrentDirectory);
 		private string selectedSong;
 
+		private string keyWord = "";
+
+		private bool isPuased = false;
+
 		private void Form1_Load(object sender, EventArgs e)
 		{
 			songList.Items.Clear();
@@ -56,9 +60,29 @@ namespace Toones
 
 		}
 
-		private void pictureBox2_Click(object sender, EventArgs e)
+		private void pictureBox2_Click_1(object sender, EventArgs e)
 		{
 			axWindowsMediaPlayer1.Ctlcontrols.stop();
+			label2.Text = "No Song";
+		}
+
+		private void trackBar1_Scroll(object sender, EventArgs e)
+		{
+			axWindowsMediaPlayer1.settings.volume = trackBar1.Value;
+		}
+
+		private void pictureBox3_Click(object sender, EventArgs e)
+		{
+			if (!isPuased)
+			{
+				axWindowsMediaPlayer1.Ctlcontrols.pause();
+				isPuased = true;
+			}
+			else if (isPuased)
+			{
+				axWindowsMediaPlayer1.Ctlcontrols.play();
+				isPuased = false;
+			}
 		}
 	}
 }
