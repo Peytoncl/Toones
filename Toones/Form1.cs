@@ -23,7 +23,13 @@ namespace Toones
 
 		private string keyWord = "";
 
+		private bool theme = true;
+
 		private bool isPuased = false;
+
+		private string songDuration;
+
+		private bool goDown;
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
@@ -38,7 +44,7 @@ namespace Toones
 
 		private void label1_Click(object sender, EventArgs e)
 		{
-
+			
 		}
 
 		private void pictureBox1_Click(object sender, EventArgs e)
@@ -47,7 +53,11 @@ namespace Toones
 			string filePath = Path.Combine(Environment.CurrentDirectory, @"Songs\", selectedSong + ".mp3");
 			axWindowsMediaPlayer1.URL = filePath;
 			axWindowsMediaPlayer1.Ctlcontrols.play();
+			songDuration = axWindowsMediaPlayer1.currentMedia.durationString;
+			keyWord = "";
 			label2.Text = selectedSong;
+			songDuration = axWindowsMediaPlayer1.currentMedia.durationString;
+			label1.Text = songDuration;
 		}
 
 		private void songList_SelectedIndexChanged(object sender, EventArgs e)
@@ -83,6 +93,26 @@ namespace Toones
 				axWindowsMediaPlayer1.Ctlcontrols.play();
 				isPuased = false;
 			}
+		}
+
+		private void label1_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void pictureBox4_Click(object sender, EventArgs e)
+		{
+			
 		}
 	}
 }
