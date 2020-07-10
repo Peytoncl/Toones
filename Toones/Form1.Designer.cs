@@ -28,35 +28,70 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+			this.TopPanel = new System.Windows.Forms.Panel();
+			this.printDialog1 = new System.Windows.Forms.PrintDialog();
+			this.label1 = new System.Windows.Forms.Label();
+			this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+			this.TopPanel.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// webBrowser1
+			// TopPanel
 			// 
-			this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-			this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-			this.webBrowser1.Name = "webBrowser1";
-			this.webBrowser1.Size = new System.Drawing.Size(800, 450);
-			this.webBrowser1.TabIndex = 0;
-			this.webBrowser1.Url = new System.Uri("https://open.spotify.com/track/615vw74T1NebV8pKoutm2J?si=bQX_x9XDTqOZbH06hqVDiQ", System.UriKind.Absolute);
+			this.TopPanel.BackColor = System.Drawing.SystemColors.ControlLight;
+			this.TopPanel.Controls.Add(this.label1);
+			this.TopPanel.Location = new System.Drawing.Point(0, 0);
+			this.TopPanel.Name = "TopPanel";
+			this.TopPanel.Size = new System.Drawing.Size(800, 33);
+			this.TopPanel.TabIndex = 1;
+			// 
+			// printDialog1
+			// 
+			this.printDialog1.UseEXDialog = true;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(12, 9);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(89, 17);
+			this.label1.TabIndex = 0;
+			this.label1.Text = "Now Playing:";
+			this.label1.Click += new System.EventHandler(this.label1_Click);
+			// 
+			// axWindowsMediaPlayer1
+			// 
+			this.axWindowsMediaPlayer1.Enabled = true;
+			this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(234, 191);
+			this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+			this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+			this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(0, 0);
+			this.axWindowsMediaPlayer1.TabIndex = 2;
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Controls.Add(this.webBrowser1);
+			this.Controls.Add(this.axWindowsMediaPlayer1);
+			this.Controls.Add(this.TopPanel);
 			this.Name = "Form1";
-			this.Text = "Form1";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+			this.Text = "Toones";
 			this.Load += new System.EventHandler(this.Form1_Load);
+			this.TopPanel.ResumeLayout(false);
+			this.TopPanel.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
-
-		private System.Windows.Forms.WebBrowser webBrowser1;
+		private System.Windows.Forms.Panel TopPanel;
+		private System.Windows.Forms.PrintDialog printDialog1;
+		private System.Windows.Forms.Label label1;
+		private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
 	}
 }
 

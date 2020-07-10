@@ -8,3 +8,8 @@ C:\Users\armyd\Documents\GitHub\Toones\Toones\obj\Debug\Toones.csproj.GenerateRe
 C:\Users\armyd\Documents\GitHub\Toones\Toones\obj\Debug\Toones.csproj.CoreCompileInputs.cache
 C:\Users\armyd\Documents\GitHub\Toones\Toones\obj\Debug\Toones.exe
 C:\Users\armyd\Documents\GitHub\Toones\Toones\obj\Debug\Toones.pdb
+C:\Users\armyd\Documents\GitHub\Toones\Toones\bin\Debug\Interop.WMPLib.dll
+C:\Users\armyd\Documents\GitHub\Toones\Toones\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\armyd\Documents\GitHub\Toones\Toones\obj\Debug\Interop.WMPLib.dll
+C:\Users\armyd\Documents\GitHub\Toones\Toones\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\armyd\Documents\GitHub\Toones\Toones\obj\Debug\Toones.csproj.ResolveComReference.cache
